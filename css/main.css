@@ -103,7 +103,7 @@ img::-moz-selection {
 #mainNav {
   position: absolute;
   padding-top: 5px;
-  background-color: #bf1010 !important;
+  background-color: #800000 !important;
   border-bottom: 1px solid #e9ecef;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   #mainNav .navbar-brand {

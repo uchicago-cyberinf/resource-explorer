@@ -2,33 +2,31 @@
 
 const resources = [
       {
-         "title": "Nero",
-         "id": "nero",
-         "url": "https://nero-docs.stanford.edu",
+         "title": "IT Services Cyberinfrastructure",
+         "id": "itservices",
+         "url": "https://its.uchicago.edu/",
          "attributes": {
-           "q-kind": ["kind-compute", "kind-cloud"],
-           "q-service": [],
-           "q-who": ["who-faculty"], // only faculty allowed
-                                     // domain is left out, implying all domains
-                                     // size is left out, implying all sizes
-           "q-framework": ["framework-kubernetes", "framework-containers"],
-           "q-backups": ["backups-true"]
+           "q-kind": ["kind-network", "kind-service", "kind-storage", "kind-cloud"],
+           "q-service": ["service-endtoend"],
+           "q-who": [],
+           "q-framework": [],
+           "q-backups": []
          }
       },
       {
-         "title": "Research Software Engineering",
-         "id": "rse-services",
-         "url": "https://stanford-rc.github.io/rse-services",
+         "title": "Research Computing Center (RCC)",
+         "id": "rcc",
+         "url": "https://rcc.uchicago.edu/",
          "attributes": {
-           "q-kind": ["kind-service"],
+           "q-kind": ["kind-service", "kind-hpc", "kind-compute"],
            "q-size": [],
            "q-service": ["service-software"],
-           "q-framework": ["framework-containers"],
+           "q-framework": [],
            "q-backups": [],
            "q-snapshots": []
          }
-      },
-      {
+      } // Add a comma before you add more...
+/*      {
          "title": "Sherlock",
          "id": "sherlock",
          "url": "https://www.sherlock.stanford.edu/docs/overview/introduction/",
@@ -61,7 +59,7 @@ const resources = [
            "q-framework": [], // no containers, kubernetes, or slurm
            "q-backups": ["backups-true"]
          }
-      }
+      } */
    ]
 
 const questions = [
@@ -73,23 +71,27 @@ const questions = [
          "type": "multiple-choice",
          "options": [
             {
-               "name": "storage",
+               "name": "Storage",
                "id": "kind-storage"
             },
             {
-               "name": "service",
+               "name": "Service",
                "id": "kind-service"
             },
             {
-               "name": "compute",
+               "name": "Compute",
                "id": "kind-compute"
             },
             {
-               "name": "cloud",
+               "name": "Cloud",
                "id": "kind-cloud"
             },
             {
-               "name": "hpc",
+               "name": "Network",
+               "id": "kind-network"
+            },
+            {
+               "name": "HPC",
                "id": "kind-hpc"
             }
          ]
@@ -102,8 +104,12 @@ const questions = [
          "type": "multiple-choice",
          "options": [
             {
-               "name": "software engineering",
+               "name": "Software Engineering",
                "id": "service-software"
+            },
+            {
+               "name": "End-to-End Performance",
+               "id": "service-endtoend"
             }
          ]
       },
@@ -158,23 +164,23 @@ const questions = [
          ]
       },
       {
-         "title": "What size of storage are you looking for?",
+         "title": "What size of resource are you looking for?",
          "id": "q-size",
-         "description": "If applicable, give an approximate unit of storage.",
+         "description": "If applicable, give an approximate scale of resource",
          "required": false,
          "type": "minimum-choice",
          "options": [
             {
-               "name": "gigabytes",
-               "id": "size-gigabytes-1"
+               "name": "Small (GB-Scale, 1-10Gbps, Small Cores/RAM, etc)",
+               "id": "size-small-1"
             },
             {
-               "name": "terabytes",
-               "id": "size-terabytes-2"
+               "name": "Medium (TB-Scale, 10-40Gbps, Medium Cores/RMA, etc)",
+               "id": "size-medium-2"
             },
             {
-               "name": "petabytes",
-               "id": "size-petabytes-3"
+               "name": "Large (PB-Scale, 40+Gbps, Large Cores/RAM, etc)",
+               "id": "size-large-3"
             }
          ]
       },

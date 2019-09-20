@@ -9,12 +9,12 @@
 
 
 .btn-primary {
-  background-color: #500e3d;
-  border-color: #500e3d; }
+  background-color: #800000;
+  border-color: #800000; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
     color: #000;
-    background-color: #951169 !important;
-    border-color: #951169 !important; }
+    background-color: #800000 !important;
+    border-color: #800000 !important; }
 
 .btn-lg {
   font-size: 16px;
