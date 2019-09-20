@@ -8,9 +8,7 @@ const resources = [
          "attributes": {
            "q-kind": ["kind-network", "kind-service", "kind-storage", "kind-cloud"],
            "q-service": ["service-endtoend"],
-           "q-who": [],
            "q-framework": [],
-           "q-backups": []
          }
       },
       {
