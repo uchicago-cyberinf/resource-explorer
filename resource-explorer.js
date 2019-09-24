@@ -18,11 +18,22 @@ const resources = [
          "attributes": {
            "q-kind": ["kind-service", "kind-hpc", "kind-compute"],
            "q-size": [],
-           "q-service": ["service-software"],
+           "q-service": ["service-software", "service-hpc"],
            "q-framework": [],
            "q-backups": [],
            "q-snapshots": []
-         }
+         },
+         "title": "Secure Data Enclave (SDE)",
+         "id": "sde",
+         "url": "https://securedata.uchicago.edu/",
+         "attributes": {
+           "q-kind": ["kind-service", "kind-storage", "kind-compute"],
+           "q-size": [],
+           "q-service": ["service-software"],
+           "q-framework": [],
+           "q-sensitive": ["sensitive-true"],
+           "q-snapshots": []
+         },
       } // Add a comma before you add more...
 /*      {
          "title": "Sherlock",
