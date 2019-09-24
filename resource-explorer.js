@@ -23,6 +23,7 @@ const resources = [
            "q-backups": [],
            "q-snapshots": []
          },
+       {
          "title": "Secure Data Enclave (SDE)",
          "id": "sde",
          "url": "https://securedata.uchicago.edu/",
