@@ -33,7 +33,7 @@ const resources = [
            "q-framework": [],
            "q-sensitive": ["sensitive-true"],
            "q-snapshots": []
-         },
+         }
       } // Add a comma before you add more...
 /*      {
          "title": "Sherlock",
