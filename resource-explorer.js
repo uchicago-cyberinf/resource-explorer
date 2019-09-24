@@ -7,8 +7,9 @@ const resources = [
          "url": "https://its.uchicago.edu/",
          "attributes": {
            "q-kind": ["kind-network", "kind-service", "kind-storage", "kind-cloud"],
-           "q-service": ["service-endtoend"],
-           "q-framework": [],
+           "q-service": ["service-endtoend", "service-general"],
+           "q-sensitive": [],
+           "q-framework": []
          }
       },
       {
@@ -20,6 +21,7 @@ const resources = [
            "q-size": [],
            "q-service": ["service-software", "service-hpc"],
            "q-framework": [],
+           "q-sensitive": [],
            "q-backups": [],
            "q-snapshots": []
          }
@@ -37,40 +39,6 @@ const resources = [
            "q-snapshots": []
          }
       } // Add a comma before you add more...
-/*      {
-         "title": "Sherlock",
-         "id": "sherlock",
-         "url": "https://www.sherlock.stanford.edu/docs/overview/introduction/",
-         "attributes": {
-           "q-kind": ["kind-compute", "kind-hpc"],
-           "q-service": [],
-           "q-framework": ["framework-slurm", "framework-containers"],
-           "q-backups": ["backups-true"]
-         }
-      },
-      {
-         "title": "SCG-4",
-         "id": "scg-4",
-         "url": "https://login.scg.stanford.edu/",
-         "attributes": {
-           "q-kind": ["kind-compute", "kind-hpc"],
-           "q-service": [],
-           "q-framework": ["framework-slurm", "framework-containers"],
-           "q-domain": ["domain-bioinformatics"],
-           "q-backups": ["backups-true"]
-         }
-      },
-      {
-         "title": "Oak",
-         "id": "oak",
-         "url": "https://stanford-rc.github.io/docs-oak/",
-         "attributes": {
-           "q-kind": ["kind-storage"],
-           "q-service": [],
-           "q-framework": [], // no containers, kubernetes, or slurm
-           "q-backups": ["backups-true"]
-         }
-      } */
    ]
 
 const questions = [
@@ -114,6 +82,10 @@ const questions = [
          "required": false,
          "type": "multiple-choice",
          "options": [
+            {
+               "name": "General Cyberinfrastructure Support",
+               "id": "service-general"
+            },
             {
                "name": "Software Engineering",
                "id": "service-software"
@@ -227,7 +199,7 @@ const questions = [
          "id": "q-sensitive",
          "description": "Some or all of your data could be considered sensitive or protected.",
          "required": false,
-         "type": "single-choice",
+         "type": "multiple-choice",
          "options": [
             {
                "name": "Yes. sensitive/protected.",
