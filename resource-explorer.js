@@ -108,6 +108,10 @@ const questions = [
             {
                "name": "End-to-End Performance",
                "id": "service-endtoend"
+            },
+            {
+               "name": "High Performance Computing (HPC)",
+               "id": "service-hpc"
             }
          ]
       },
@@ -132,7 +136,7 @@ const questions = [
             }
          ]
       },
-      {
+/*      {
          "title": "Is the intended user associated with a specific domain or department?",
          "id": "q-domain",
          "description": "If applicable, select an associated domain or department.",
@@ -161,6 +165,7 @@ const questions = [
             }
          ]
       },
+*/
       {
          "title": "What size of resource are you looking for?",
          "id": "q-size",
@@ -182,7 +187,7 @@ const questions = [
             }
          ]
       },
-      {
+/*      {
          "title": "Are you looking for a particular framework or job manager?",
          "id": "q-framework",
          "description": "Choose one or more frameworks that you would like to use.",
@@ -203,20 +208,21 @@ const questions = [
             }
          ]
       },
+*/
       {
-         "title": "Do you require backup?",
-         "id": "q-backups",
-         "description": "Some or all of your files will be copied on a regular basis in case you need restore.",
+         "title": "Are you working with data that is considered protected or sensitive? (PII/HIPAA/etc)",
+         "id": "q-sensitive",
+         "description": "Some or all of your data could be considered sensitive or protected.",
          "required": false,
          "type": "single-choice",
          "options": [
             {
-               "name": "backups",
-               "id": "backups-true"
+               "name": "Yes. sensitive/protected.",
+               "id": "sensitive-true"
             },
             {
-               "name": "no backups",
-               "id": "backups-false"
+               "name": "No. Nothing sensitive/protected.",
+               "id": "sensitive-false"
             }
          ]
       },
