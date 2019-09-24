@@ -22,7 +22,8 @@ const resources = [
            "q-framework": [],
            "q-backups": [],
            "q-snapshots": []
-         },
+         }
+       },
        {
          "title": "Secure Data Enclave (SDE)",
          "id": "sde",
