@@ -210,8 +210,8 @@ const questions = [
                "id": "sensitive-false"
             }
          ]
-      },
-      {
+      } // add a comma to add more questions
+/*      {
          "title": "Do you want snapshots?",
          "id": "q-snapshots",
          "description": "A read-only image to reflect the state of your files.",
@@ -227,7 +227,7 @@ const questions = [
                "id": "snapshots-false"
             }
          ]
-      }
+      }*/
    ]
 
 new Vue ({
